@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"> Ashley's PS70! Intro to Digital Fabrication!</h3>
+    <div class="navbar-nav">
+      <h4><a class="nav-link" href="./index.html">Home</a></h4>
+      <h4><a class="nav-link" href="./final-project-proposal.html">Final Project</a></h4>
+      <h4><a class="nav-link" href="./about.html">About</a></h4>
+    </div>
+  </div>
+</nav>
+
+<body class="mx-3">
+
+  <h3>WEEK 10</h3> 
+
+  <p>
+    So my ultimate product is a lovebox which is commercially produced for over $100 online depending on the functions that you want with it. Going back to my story with it, basically I wanted a contraption that would allow me to communicate more simply with my parents. They’re both complex people who refuse to believe that they can just contact me or call me if they want to speak to me. Instead, they wait for me to call knowing that that’s when I’m free to chat and otherwise assume I’m too busy and we go for weeks and weeks without texting or FaceTiming or calling despite me being so far from them and everyone missing one another.
+  </p>
+
+  <p>  My process started out with understanding more the groundwork of the work that I was about to do. Ibrahim had suggested to all of us students to first start with understanding what the input and output of our gadgets were going to be. The way I understood my project, I decided that I would be inputting text information (notifications, messages) through the internet to the microcontroller that would output a display of that message to a box for my parents to see. 
+  </p>
+
+  <p> I went to the internet for inspiration and found that some people had created and documented the general process of making these boxes before me. (Thank you julisa99 on Github, Danni_innit on Autodesk instructables, and also marcelstoer on Github!) Their processes were certainly different than mine because of the different libraries they used and also the different processing units they utilized, but what their work helped me understand was that I had three major components that I was working with that I needed to think through.
+  </p>
+
+  <p>Takeaway 1: It was very important for me to distill down the essential pieces of movement for my project: the servo motor that moves when a message comes in. The firebase server that collects new messages. and the OLED that displays what the server collects as soon as something new pops in. Understanding that is important to developing the code and grasping the big picture of the product before I even started.
+  </p> 
+
+  <p> Then, I started the process of testing my materials and making sure that my board worked, the circuitry was correct, and that I knew what software I was using and how it all worked. Testing the circuitry on a breadboard for the OLED, for the servo motor, setting up the Firebase, and doing all the software work was my first step. 
+  </p>
+
+  <div class="row">
+    <div class="column">
+      <img class="img-me" src="images/finalcode1.png" alt="finalcode1">
+  <div class="row">
+    <div class="column">
+      <img class="img-me" src="images/finalcode2.png" alt="finalcode2">
+  <div class="row">
+    <div class="column">
+      <img class="img-me" src="images/finalcode3.png" alt="finalcode3">
+   
+  <p> After software, my next—and hardest—steps were all the hardware things. I started by asking for help! Kassia was rly nice and helped me understand what it would look like to integrate everything without a breadboard. I started brainstorming how the OLED would look on top of the ESP32 unit and where the servo would be and whether that all makes sense. At first, I even tried using a Xiao unit because the size was extremely appealing, but for some reason, it wouldn’t work and for my sanity, I decided to just stick with the slightly bigger/longer ESP32 (with Kalos and Kassia’s input). 
+  </p>
+      
+  <div class="row">
+    <div class="column">
+      <img class="img-me" src="images/insideoflovebox.jpg" alt="insideoflovebox">
+  <div class="row">
+    <div class="column">
+      <img class="img-me" src="images/insideoflovebox2.jpeg" alt="insideoflovebox2">
+
+<p> Takeaway 2: Drawing plans or sketches of what is hard to visualize is a really good way to again wrap my head around what is difficult to see otherwise. 
+</p>
+
+<p>The next step was soldering! This part was also extremely fun because it made me feel like I was a real engineer like in the movies. I spent a long time in the soldering station readjusting the pin that was holding the components together and getting comfortable with soldering essentially. I really needed to be fairly precise with my movements and intentional with the way that everything was held which was a bit frustrating at times but eventually got done in a way that all the electricity and power flowed through the circuit correctly!
+</p>
+
+<div class="row">
+  <div class="column">
+    <img class="img-me" src="images/solderinglovebox.jpg" alt="soldering">
+
+<p> Takeaway 3: Patience really is a virtue and in the lab, it’s not really helpful to sort of sit around uncertain of whether something is going to work or not. More often than not, the best step is to try finicking with something, deleting a line of code here, attempting a quick soldering job, etc. Then, it’s at least a step in a certain direction and that will allow for more understanding. 
+</p>
+
+<p> Once the box was made, a lot of the hardware work involved laser cutting, drilling holes, measuring dimensions, and putting things together eventually. 
+</p>
+
+<div class="row">
+  <div class="column">
+    <img class="img-me" src="images/attachingmotor.jpg" alt="attachingmotor">
+<div class="row">
+  <div class="column">
+    <img class="img-me" src="images/3dprintingheart.jpg" alt="printingheart">
+<div class="row">
+  <div class="column">
+    <img class="img-me" src="images/finalsetup.jpg" alt="finalsetup">
+
+<p> Takeaway 4: It’s really important to be detail oriented in the measuring work especially. Honestly even slight discrepancies in measurements will yield in completely different builds and a lot of inaccuracies that seem small will add to make big presented differences. 
+</p>
+
+<p> My final project in all honesty ended up being a lot simpler than I think my delusions of grandeur had made everything out to be. But I do think I am happy that I was able to produce something that worked out in the end. I believe that if I was a bit less risk-averse then I would have been able to potentially think a bit bigger and less within my own confines but I am still proud of the contraption that was produced. </p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fBPxrG3ena4" allowfullscreen></iframe>
+</div>
+
+
+

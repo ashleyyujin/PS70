@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>PS70: Intro to Digital Fabrication </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+  <div style="align-items: left; justify-content:left;" class="container-fluid">
+    <h3 class="nav-title"> Ashley's PS70! Intro to Digital Fabrication!</h3>
+    <div class="navbar-nav">
+      <h4><a class="nav-link" href="./index.html">Home</a></h4>
+      <h4><a class="nav-link" href="./final-project-proposal.html">Final Project</a></h4>
+      <h4><a class="nav-link" href="./about.html">About</a></h4>
+    </div>
+  </div>
+</nav>
+
+<body class="mx-3">
+
+<h3>WEEK 7</h3> 
+
+<p>
+  This week’s assignment entailed using an output device that students had previously not used before, which I was able to complete with my lovebox. In my final project, my lovebox ultimately contained an OLED display that was able to produce messages from Firebase. For this week’s assignment, I’ll recreate that process of me setting up an OLED display.
+
+When I learned how to set-up the OLED for the first time, it essentially was a simple process of understanding the code on Nathan’s website tutorial and the changes that Kassia put in for the ESP32S2 units. I implemented those changes in my final, but in this week I used an arduino that didn’t need those changes and had, to a degree, simpler code. 
+
+<div class="row">
+  <div class="column">
+
+  </div>
+    <img class="img-me" src="images/iotsetup.png" alt="IOT Setup">
+</div>
+
+</p>
+
+<p>The biggest challenge of this week/output devices was probably the component of the oscilloscope readings.
+
+  Using the oscilloscope was a bit of a challenge since it was a lot of learning from scratch what knobs do and understanding the wave with trial-and-error. I connected an Arduino Uno unit with an OLED display and attempted to read the oscilloscope but found that I was basically just looking at a static line! I was really confused because after seeing tutorials and videos it seemed like there was supposed to be more to the reading than just a “slightly wavy, but mostly straight” line. I looked around previous students’ websites and tried to see what their write-ups said about the oscilloscope and I discovered that I was in fact measuring the wrong thing. Classic.
+  <div class="row">
+    <div class="column">
+      <img class="img-me" src="images/incorrectwave.png" alt="Wrong wave">
+    </div>
+  </div>
+  
+</p>
+
+
+<p> When I started hooking onto information pins I found a lot more interesting things. I found that connecting the SCL pin gives the reading of the clock function of the OLED which is essentially the standardized timing of the message display that I coded. So the waves were static, clean, and appeared in groups of nine. </p>
+<div class="row">
+  <div class="column">
+    <img class="img-me" src="images/clockoled.jpg" alt="Clock Oled">
+
+<p> 
+  <body class="mb-5"
+</p>
+
+<p>Then, Nathan came and helped me further with the reading of the oscilloscope and I found that even the clock wasn’t the actual reading! When hooking onto the SDA pin, I found the readings of the actual messages in bit form and saw those clicks on the screen. The readings themselves were non-standard and spaced out in what appears to be random increments. But I would hypothesize that the spacing might be changes in messages (from “I miss you!” to “hello”) or different letters.  </p>
+<div class="row">
+  <div class="column">
+    <img class="img-me" src="images/oledmessage.jpg" alt="OLED Message">
+    <div class="row">
+      <div class="column">
+        <img class="img-me" src="images/hello:imissyou.png" alt="Hello Code">
+  
+  </div>

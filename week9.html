@@ -18,61 +18,29 @@
 
 <body class="mx-3">
 
-  <!doctype html>
-<html class="no-js" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHYSCI 70: Introduction to Digital Fabrication</title>
-</head>
+  <h3>WEEK 9</h3> 
 
-<body>
+  <p>
+    For the Internet of Things week, I was partnered with Bella and David to ideate something that connected to the internet to get information. Our collective brains decided to make a vibe checker machine (three, one for each of us) that connected to Firebase and could communicate with one another and request/depict current vibes and moods of the group. 
 
-     <button id="turn-on" name="turnon">Turn On</button>
-     <button id="turn-off" name="turnoff">Turn Off</button>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-
-    <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCILotY5LZ-80d9KQYMH_thcEQt8kGcyuo",
-        authDomain: "lovebox-faff8.firebaseapp.com",
-        databaseURL: "https://lovebox-faff8-default-rtdb.firebaseio.com",
-        projectId: "lovebox-faff8",
-        storageBucket: "lovebox-faff8.appspot.com",
-        messagingSenderId: "875357316009",
-        appId: "1:875357316009:web:c9687ecb8bde56f5e7dab8"
-    };
-        // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    // Get a database reference to our blog
-    var ref = firebase.database().ref("/");
-
-    // make the buttons call the function below 
-    document.getElementById('turn-on').addEventListener('click', turnOn, false);
-    document.getElementById('turn-off').addEventListener('click', turnOff, false);
-
-    function turnOn(){
-        console.log("turning on");
-        ref.update({
-            "LED_STATUS": "ON"
-        });
-    }
-
-    function turnOff(){
-        console.log("turning off");
-        ref.update({
-            "LED_STATUS": "OFF"
-        });
-    }    
-</script>
-
-</body>
-
+    For the vibe check code, the actual way the code was structured was pretty straightforward. There were definitions for the Firebase connection, definitions for the OLED screen, attempts to connect to the wifi, and also sets the instructions in the loop of what the machine actually does which is read the button statuses, clear existing values, see if someone initiated a vibe check on the firebase, and then display the values that people submit on their individual machines. 
+   
+    The machines also turned out very cute (thank you David for your eye for aesthetic design)
+  <div class="row">
+    <div class="column">
+    </div>
+      <img class="img-me" src="images/vibechecker.jpg" alt="Vibe Checker">
+  </div>
+  
+  </p>
+  
+  <p>I also utilized components of the Internet of Things week into my final project which relied heavily on Firebase. I also relied heavily on the code from this week’s partner project to make my final project’s code and database. A lot of the components are incredibly similar: the OLED and Firebase connectivity being two major aspects. I think with using the vibe check code, a lot of my final went more smoothly and the only other difference ended up being the additional component of a servo motor that also engages when a new message enters the Firebase server. 
+  </p> 
+      <div class="row">
+      <div class="column">
+        <img class="img-me" src="images/firebaseex.jpeg" alt="Firebase Ex.">
+      </div>
+    </div>
+  </p>
+  
+  
